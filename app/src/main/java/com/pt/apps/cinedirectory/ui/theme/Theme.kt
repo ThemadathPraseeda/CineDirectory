@@ -9,29 +9,43 @@ import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    primary = CinemaGold,
+    onPrimary = CinemaDarkOnPrimary,
+    primaryContainer = CinemaDarkPrimaryContainer,
+    onPrimaryContainer = CinemaGoldLight,
+    secondary = CinemaGoldDark,
+    onSecondary = Color.White,
+    tertiary = WatchlistBlue,
+    background = CinemaDarkBg,
+    onBackground = CinemaTextPrimaryDark,
+    surface = CinemaDarkSurface,
+    onSurface = CinemaTextPrimaryDark,
+    surfaceVariant = CinemaDarkCard,
+    onSurfaceVariant = CinemaTextSecondaryDark,
+    outline = CinemaDarkCardBorder
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
-
-    /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
+    primary = CinemaGoldDark,
     onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
+    primaryContainer = CinemaLightPrimaryContainer,
+    onPrimaryContainer = CinemaLightOnPrimaryContainer,
+    secondary = CinemaGold,
+    onSecondary = CinemaTextLightOnSecondary,
+    tertiary = WatchlistBlue,
+    background = CinemaLightBg,
+    onBackground = CinemaTextPrimaryLight,
+    surface = CinemaLightSurface,
+    onSurface = CinemaTextPrimaryLight,
+    surfaceVariant = CinemaLightCard,
+    onSurfaceVariant = CinemaTextSecondaryLight,
+    outline = CinemaLightCardBorder
 )
+
 
 @Composable
 fun CineDirectoryTheme(
